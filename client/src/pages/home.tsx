@@ -8,6 +8,7 @@ import {
   Bath, Maximize, Calendar
 } from "lucide-react";
 import { SiAirbnb } from "react-icons/si";
+import { BookingIcon } from "@/components/booking-icon";
 import { useSEO } from "@/hooks/use-seo";
 
 const amenities = [
@@ -55,12 +56,12 @@ const reviews = [
 ];
 
 const gallery = [
-  { src: "/images/salon.png", alt: "Salon lumineux avec d\u00e9coration de charme" },
-  { src: "/images/chambre.png", alt: "Chambre principale avec lit king size" },
-  { src: "/images/cuisine.png", alt: "Cuisine enti\u00e8rement \u00e9quip\u00e9e" },
-  { src: "/images/pool.png", alt: "Piscine ext\u00e9rieure avec jardin" },
-  { src: "/images/fitness.png", alt: "Salle de sport \u00e9quip\u00e9e" },
-  { src: "/images/charente-river.png", alt: "Bords de Charente" },
+  { src: "/images/photo2.jpg", alt: "Salon ouvert sur cuisine \u00e9quip\u00e9e" },
+  { src: "/images/chambre1.jpg", alt: "Chambre principale avec lit king size et penderie" },
+  { src: "/images/photo3.jpg", alt: "Salle \u00e0 manger avec mur en pierre charentaise" },
+  { src: "/images/photo4.jpg", alt: "Cuisine \u00e9quip\u00e9e avec caf\u00e9ti\u00e8re \u00e0 grain" },
+  { src: "/images/chambre2.jpg", alt: "Chambre 2 avec lit double et lit b\u00e9b\u00e9" },
+  { src: "/images/photo5.jpg", alt: "Escalier charentais en bois avec lumi\u00e8re naturelle" },
 ];
 
 export default function Home() {
@@ -74,7 +75,7 @@ export default function Home() {
     <div className="min-h-screen">
       <section className="relative h-[85vh] min-h-[600px] overflow-hidden" data-testid="section-hero">
         <img
-          src="/images/hero-house.png"
+          src="/images/photo2.jpg"
           alt="Maison charentaise de charme avec piscine \u00e0 Hiersac"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -108,6 +109,7 @@ export default function Home() {
             </a>
             <a href="https://www.booking.com/hotel/fr/maison-charentaise-de-charme-avec-piscine-jardin-et-salle-de-sport.fr.html" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-[#003580] border-[#003580] text-white" data-testid="button-booking">
+                <BookingIcon className="w-5 h-5 mr-2" />
                 R&eacute;server sur Booking
               </Button>
             </a>
@@ -150,10 +152,10 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              <img src="/images/salon.png" alt="Salon" className="rounded-md w-full h-40 object-cover" />
-              <img src="/images/chambre.png" alt="Chambre" className="rounded-md w-full h-40 object-cover" />
-              <img src="/images/cuisine.png" alt="Cuisine" className="rounded-md w-full h-40 object-cover" />
-              <img src="/images/pool.png" alt="Piscine" className="rounded-md w-full h-40 object-cover" />
+              <img src="/images/salon.jpg" alt="Salon lumineux" className="rounded-md w-full h-40 object-cover" />
+              <img src="/images/chambre1.jpg" alt="Chambre principale" className="rounded-md w-full h-40 object-cover" />
+              <img src="/images/photo4.jpg" alt="Cuisine \u00e9quip\u00e9e" className="rounded-md w-full h-40 object-cover" />
+              <img src="/images/photo3.jpg" alt="Salle \u00e0 manger" className="rounded-md w-full h-40 object-cover" />
             </div>
           </div>
         </div>
@@ -281,7 +283,8 @@ export default function Home() {
             </a>
             <a href="https://www.booking.com/hotel/fr/maison-charentaise-de-charme-avec-piscine-jardin-et-salle-de-sport.fr.html" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="text-white border-white/40 bg-white/10 backdrop-blur-sm" data-testid="button-booking-cta">
-                  Booking
+                <BookingIcon className="w-5 h-5 mr-2" />
+                Booking
               </Button>
             </a>
             <Link href="/contact">

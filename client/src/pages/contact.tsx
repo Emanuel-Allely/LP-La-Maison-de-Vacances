@@ -18,6 +18,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
 import { SiAirbnb } from "react-icons/si";
+import { BookingIcon } from "@/components/booking-icon";
 import { useState } from "react";
 import { useSEO } from "@/hooks/use-seo";
 
@@ -283,7 +284,8 @@ export default function Contact() {
                   className="block"
                 >
                   <Button variant="outline" className="w-full justify-start" data-testid="button-contact-booking">
-                      R&eacute;server sur Booking
+                    <BookingIcon className="w-5 h-5 mr-3 text-[#003580]" />
+                    R&eacute;server sur Booking
                   </Button>
                 </a>
               </div>

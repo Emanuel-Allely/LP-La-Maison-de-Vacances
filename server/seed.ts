@@ -136,6 +136,44 @@ const seedArticles = [
     category: "Famille",
     published: true,
   },
+  {
+    title: "Les meilleurs restaurants autour de Hiersac : o\u00f9 bien manger en Charente",
+    slug: "meilleurs-restaurants-hiersac-charente",
+    excerpt: "De L'Aromate \u00e0 Hiersac aux tables gastronomiques de Cognac, d\u00e9couvrez notre s\u00e9lection des meilleurs restaurants \u00e0 proximit\u00e9 de notre maison de charme.",
+    content: `<p>L'un des plaisirs d'un s\u00e9jour en Charente, c'est la gastronomie ! Autour de notre maison de charme \u00e0 Hiersac, de nombreuses tables raviront les gourmands, des bistrots de terroir aux restaurants \u00e9toil\u00e9s. Voici notre s\u00e9lection des meilleures adresses.</p>
+
+<h2>\u00c0 Hiersac m\u00eame : L'Aromate</h2>
+<p><strong>L'Aromate</strong> se trouve \u00e0 quelques pas de notre maison, au 2 Chemin du Champ Farchaud \u00e0 Hiersac. Ce restaurant de cuisine fran\u00e7aise propose une carte qui \u00e9volue au fil des saisons, avec des produits frais du march\u00e9. La terrasse ombrag\u00e9e est id\u00e9ale pour les d\u00e9jeuners d'\u00e9t\u00e9. L'accueil est chaleureux et les prix tr\u00e8s raisonnables. Un incontournable \u00e0 5 minutes \u00e0 pied !</p>
+<p><em>Ouvert \u00e0 partir de 11h30 \u2014 R\u00e9servation conseill\u00e9e au 06 58 43 32 69</em></p>
+
+<h2>En bord de Charente : L'Enfant Terrible</h2>
+<p><strong>L'Enfant Terrible</strong>, situ\u00e9 \u00e0 Sireuil au 1 Chemin des Gabarriers, est une adresse coup de c\u0153ur pour son cadre exceptionnel. Install\u00e9 en bordure de la Charente, ce restaurant propose une cuisine maison savoureuse avec des produits de qualit\u00e9. La terrasse de 50 couverts offre une vue magnifique sur la rivi\u00e8re \u2014 un endroit parfait pour un d\u00e9jeuner au soleil.</p>
+<p>Les portions sont g\u00e9n\u00e9reuses, le service est souriant et le rapport qualit\u00e9-prix excellent. C'est aussi un arr\u00eat pris\u00e9 des cyclistes qui parcourent la V\u00e9lo Francette.</p>
+<p><em>Ouvert tous les jours de juin \u00e0 octobre (10h-22h), weekends uniquement hors saison \u2014 \u00c0 20 minutes de Hiersac</em></p>
+
+<h2>Tables gastronomiques \u00e0 Cognac</h2>
+
+<h3>Les Foudres \u2014 Restaurant \u00e9toil\u00e9 Michelin</h3>
+<p>Au c\u0153ur des <strong>Chais Monnet</strong>, l'un des plus beaux h\u00f4tels de la r\u00e9gion, le restaurant <strong>Les Foudres</strong> est la table \u00e9toil\u00e9e incontournable de Cognac. Le chef Mathis Debize propose une cuisine raffin\u00e9e qui met en valeur les produits du terroir charentais. Le cadre, dans d'anciens chais class\u00e9s, est absolument magnifique.</p>
+<p><em>Menu 3 temps \u00e0 partir de 80\u20ac \u2014 Accord mets et cognacs en suppl\u00e9ment \u2014 50 av. Paul-Firino-Martell, Cognac</em></p>
+
+<h3>Poulpette \u2014 Bistrot cr\u00e9atif</h3>
+<p><strong>Poulpette</strong>, au 46 avenue du Mar\u00e9chal de Lattre-de-Tassigny \u00e0 Cognac, est le bistrot moderne qui fait parler de lui. Le chef Antoine Verrouillent compose un menu qui change chaque semaine, \u00e0 base de produits de permaculture et de producteurs locaux. L'ambiance industrielle chic et les plats inventifs en font une adresse tendance.</p>
+<p><em>Menu d\u00e9jeuner \u00e0 partir de 36\u20ac \u2014 R\u00e9servation recommand\u00e9e</em></p>
+
+<h3>Le Bistro de Claude</h3>
+<p>Pour une cuisine fran\u00e7aise classique dans un cadre feutr\u00e9, <strong>Le Bistro de Claude</strong> au 35 rue Grande \u00e0 Cognac est une valeur s\u00fbre. Menu 3 services \u00e0 32\u20ac, service impeccable et plats g\u00e9n\u00e9reux : \u0153uf poch\u00e9, velout\u00e9 de potimarron, b\u0153uf charolais\u2026 Une adresse qui ne d\u00e9\u00e7oit jamais.</p>
+
+<h3>La Courtine \u2014 Terroir en bord de Charente</h3>
+<p><strong>La Courtine</strong> s\u00e9duit par son emplacement en bord de Charente et sa cuisine de terroir. La terrasse avec vue sur le fleuve est un vrai bonheur aux beaux jours. Produits locaux et ambiance conviviale garantis.</p>
+
+<h2>Nos conseils pratiques</h2>
+<p>En haute saison (juillet-ao\u00fbt), la r\u00e9servation est indispensable pour toutes ces adresses, en particulier Les Foudres et Poulpette. Pour un d\u00eener romantique, privil\u00e9giez L'Enfant Terrible ou Les Foudres. Pour un d\u00e9jeuner simple et savoureux, L'Aromate \u00e0 deux pas de la maison est l'option id\u00e9ale.</p>
+<p>Et n'oubliez pas le march\u00e9 de Hiersac les mercredis et dimanches pour acheter de quoi pr\u00e9parer vos propres repas dans la cuisine enti\u00e8rement \u00e9quip\u00e9e de notre maison de charme !</p>`,
+    image: "/images/cognac.png",
+    category: "Gastronomie",
+    published: true,
+  },
 ];
 
 export async function seedDatabase() {

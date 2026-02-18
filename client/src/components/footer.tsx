@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { MapPin, Mail } from "lucide-react";
 import { SiAirbnb } from "react-icons/si";
+import { BookingIcon } from "@/components/booking-icon";
 
 export default function Footer() {
   return (
@@ -59,6 +60,7 @@ export default function Footer() {
                   className="text-sm text-muted-foreground flex items-center gap-2"
                   data-testid="link-footer-booking"
                 >
+                  <BookingIcon className="w-4 h-4 text-[#003580]" />
                   Booking.com
                 </a>
               </li>

@@ -5,8 +5,8 @@ const seedArticles = [
   {
     title: "Visiter Cognac : guide complet des maisons de n\u00e9goce et d\u00e9gustations",
     slug: "visiter-cognac-maisons-negoce",
-    excerpt: "D\u00e9couvrez les plus grandes maisons de Cognac, de Hennessy \u00e0 R\u00e9my Martin. Un parcours oenotouristique unique \u00e0 seulement 22 km de notre maison de charme.",
-    content: `<p>La ville de Cognac, situ\u00e9e \u00e0 seulement 22 km de notre maison de charme \u00e0 Hiersac, est mondialement c\u00e9l\u00e8bre pour son eau-de-vie d'exception. Un s\u00e9jour en Charente serait incomplet sans une visite de ses prestigieuses maisons de n\u00e9goce.</p>
+    excerpt: "D\u00e9couvrez les plus grandes maisons de Cognac, de Hennessy \u00e0 R\u00e9my Martin. Un parcours oenotouristique unique \u00e0 seulement 22 km de La Maison de Vacances.",
+    content: `<p>La ville de Cognac, situ\u00e9e \u00e0 seulement 22 km de La Maison de Vacances \u00e0 Hiersac, est mondialement c\u00e9l\u00e8bre pour son eau-de-vie d'exception. Un s\u00e9jour en Charente serait incomplet sans une visite de ses prestigieuses maisons de n\u00e9goce.</p>
 
 <h2>Les grandes maisons \u00e0 visiter</h2>
 <p><strong>Hennessy</strong> \u2014 Fond\u00e9e en 1765, la maison Hennessy propose des visites guid\u00e9es de ses chais historiques situ\u00e9s sur les deux rives de la Charente. La travers\u00e9e en bateau traditionnel est un moment inoubliable.</p>
@@ -28,7 +28,7 @@ const seedArticles = [
     title: "Angoul\u00eame, cit\u00e9 de la BD : que voir et que faire",
     slug: "angouleme-cite-bd-activites",
     excerpt: "Angoul\u00eame, ville d'art et d'histoire, est c\u00e9l\u00e8bre pour son festival de la BD. D\u00e9couvrez ses remparts, ses mus\u00e9es et sa gare TGV \u00e0 15 minutes de Hiersac.",
-    content: `<p>Angoul\u00eame, situ\u00e9e \u00e0 seulement 15 minutes de notre maison de charme, est une ville fascinante perch\u00e9e sur un promontoire rocheux dominant la vall\u00e9e de la Charente. Accessible en TGV depuis Paris en 2h15, c'est le point d'entr\u00e9e id\u00e9al pour votre s\u00e9jour.</p>
+    content: `<p>Angoul\u00eame, situ\u00e9e \u00e0 seulement 15 minutes de La Maison de Vacances, est une ville fascinante perch\u00e9e sur un promontoire rocheux dominant la vall\u00e9e de la Charente. Accessible en TGV depuis Paris en 2h15, c'est le point d'entr\u00e9e id\u00e9al pour votre s\u00e9jour.</p>
 
 <h2>La Cit\u00e9 Internationale de la Bande Dessin\u00e9e</h2>
 <p>Angoul\u00eame est mondialement reconnue comme la capitale de la bande dessin\u00e9e. La Cit\u00e9 Internationale de la BD, install\u00e9e dans d'anciens chais de cognac en bord de Charente, abrite une collection exceptionnelle de planches originales, de la pr\u00e9histoire du 9e art jusqu'aux cr\u00e9ations contemporaines.</p>
@@ -42,7 +42,7 @@ const seedArticles = [
 <p>Le march\u00e9 couvert d'Angoul\u00eame est un rendez-vous incontournable le samedi matin. Vous y trouverez les meilleurs produits de la r\u00e9gion : grillons charentais, chabichou du Poitou, pineau des Charentes, et bien s\u00fbr les chocolats qui font la r\u00e9putation de la ville.</p>
 
 <h2>Acc\u00e8s depuis Hiersac</h2>
-<p>La gare TGV d'Angoul\u00eame se trouve \u00e0 seulement 15 minutes en voiture de notre maison de charme. C'est la porte d'entr\u00e9e id\u00e9ale pour rejoindre la Charente depuis Paris, Bordeaux ou Lyon.</p>`,
+<p>La gare TGV d'Angoul\u00eame se trouve \u00e0 seulement 15 minutes en voiture de La Maison de Vacances. C'est la porte d'entr\u00e9e id\u00e9ale pour rejoindre la Charente depuis Paris, Bordeaux ou Lyon.</p>`,
     image: "/images/angouleme.png",
     category: "Tourisme",
     published: true,
@@ -93,7 +93,7 @@ const seedArticles = [
     title: "T\u00e9l\u00e9travail en Charente : pourquoi choisir Hiersac",
     slug: "teletravail-charente-hiersac",
     excerpt: "Combinez t\u00e9l\u00e9travail et qualit\u00e9 de vie en Charente. Fibre optique, espace d\u00e9di\u00e9, piscine et calme absolu dans notre maison \u00e0 Hiersac.",
-    content: `<p>Le t\u00e9l\u00e9travail a transform\u00e9 notre rapport au lieu de travail. Pourquoi rester confin\u00e9 dans un appartement en ville quand on peut travailler depuis une maison de charme en pleine campagne charentaise, avec piscine et salle de sport ?</p>
+    content: `<p>Le t\u00e9l\u00e9travail a transform\u00e9 notre rapport au lieu de travail. Pourquoi rester confin\u00e9 dans un appartement en ville quand on peut travailler depuis La Maison de Vacances en pleine campagne charentaise, avec piscine et salle de sport ?</p>
 
 <h2>Un espace de travail professionnel</h2>
 <p>Notre maison \u00e0 Hiersac dispose d'un espace de t\u00e9l\u00e9travail d\u00e9di\u00e9 \u00e9quip\u00e9 d'une connexion fibre optique haut d\u00e9bit et d'\u00e9crans. Vous retrouverez les conditions de travail d'un bureau professionnel dans un cadre infiniment plus agr\u00e9able.</p>
@@ -139,8 +139,8 @@ const seedArticles = [
   {
     title: "Les meilleurs restaurants autour de Hiersac : o\u00f9 bien manger en Charente",
     slug: "meilleurs-restaurants-hiersac-charente",
-    excerpt: "De L'Aromate \u00e0 Hiersac aux tables gastronomiques de Cognac, d\u00e9couvrez notre s\u00e9lection des meilleurs restaurants \u00e0 proximit\u00e9 de notre maison de charme.",
-    content: `<p>L'un des plaisirs d'un s\u00e9jour en Charente, c'est la gastronomie ! Autour de notre maison de charme \u00e0 Hiersac, de nombreuses tables raviront les gourmands, des bistrots de terroir aux restaurants \u00e9toil\u00e9s. Voici notre s\u00e9lection des meilleures adresses.</p>
+    excerpt: "De L'Aromate \u00e0 Hiersac aux tables gastronomiques de Cognac, d\u00e9couvrez notre s\u00e9lection des meilleurs restaurants \u00e0 proximit\u00e9 de La Maison de Vacances.",
+    content: `<p>L'un des plaisirs d'un s\u00e9jour en Charente, c'est la gastronomie ! Autour de La Maison de Vacances \u00e0 Hiersac, de nombreuses tables raviront les gourmands, des bistrots de terroir aux restaurants \u00e9toil\u00e9s. Voici notre s\u00e9lection des meilleures adresses.</p>
 
 <h2>\u00c0 Hiersac m\u00eame : L'Aromate</h2>
 <p><strong>L'Aromate</strong> se trouve \u00e0 quelques pas de notre maison, au 2 Chemin du Champ Farchaud \u00e0 Hiersac. Ce restaurant de cuisine fran\u00e7aise propose une carte qui \u00e9volue au fil des saisons, avec des produits frais du march\u00e9. La terrasse ombrag\u00e9e est id\u00e9ale pour les d\u00e9jeuners d'\u00e9t\u00e9. L'accueil est chaleureux et les prix tr\u00e8s raisonnables. Un incontournable \u00e0 5 minutes \u00e0 pied !</p>
@@ -169,7 +169,7 @@ const seedArticles = [
 
 <h2>Nos conseils pratiques</h2>
 <p>En haute saison (juillet-ao\u00fbt), la r\u00e9servation est indispensable pour toutes ces adresses, en particulier Les Foudres et Poulpette. Pour un d\u00eener romantique, privil\u00e9giez L'Enfant Terrible ou Les Foudres. Pour un d\u00e9jeuner simple et savoureux, L'Aromate \u00e0 deux pas de la maison est l'option id\u00e9ale.</p>
-<p>Et n'oubliez pas le march\u00e9 de Hiersac les mercredis et dimanches pour acheter de quoi pr\u00e9parer vos propres repas dans la cuisine enti\u00e8rement \u00e9quip\u00e9e de notre maison de charme !</p>`,
+<p>Et n'oubliez pas le march\u00e9 de Hiersac les mercredis et dimanches pour acheter de quoi pr\u00e9parer vos propres repas dans la cuisine enti\u00e8rement \u00e9quip\u00e9e de La Maison de Vacances !</p>`,
     image: "/images/cognac.png",
     category: "Gastronomie",
     published: true,

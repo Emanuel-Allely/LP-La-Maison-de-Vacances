@@ -36,7 +36,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function Contact() {
   useSEO({
-    title: "Contact | Maison de Charme Hiersac - R\u00e9servation & Renseignements",
+    title: "Contact | La Maison de Vacances Hiersac - R\u00e9servation & Renseignements",
     description: "Contactez-nous pour r\u00e9server votre s\u00e9jour dans notre maison charentaise \u00e0 Hiersac. Formulaire de contact, informations pratiques et liens de r\u00e9servation.",
   });
 

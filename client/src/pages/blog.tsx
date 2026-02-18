@@ -9,7 +9,7 @@ import type { Article } from "@shared/schema";
 
 export default function Blog() {
   useSEO({
-    title: "Blog - D\u00e9couvrir la Charente | Maison de Charme Hiersac",
+    title: "Blog - D\u00e9couvrir la Charente | La Maison de Vacances Hiersac",
     description: "Guides et articles sur la Charente : Cognac, Angoul\u00eame, vignobles, randonn\u00e9es et activit\u00e9s en famille. Pr\u00e9parez votre s\u00e9jour \u00e0 Hiersac.",
     ogType: "blog",
   });

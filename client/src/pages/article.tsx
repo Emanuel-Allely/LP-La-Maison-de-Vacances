@@ -16,8 +16,8 @@ export default function ArticlePage() {
 
   useSEO({
     title: article
-      ? `${article.title} | Maison de Charme Hiersac`
-      : "Article | Maison de Charme Hiersac",
+      ? `${article.title} | La Maison de Vacances Hiersac`
+      : "Article | La Maison de Vacances Hiersac",
     description: article?.excerpt || "D\u00e9couvrez nos articles sur la Charente.",
     ogType: "article",
   });
@@ -100,7 +100,7 @@ export default function ArticlePage() {
         <div className="mt-12 pt-8 border-t">
           <div className="flex items-center gap-2 text-muted-foreground mb-4">
             <MapPin className="w-4 h-4 text-primary" />
-            <span className="text-sm">S&eacute;journez dans notre maison de charme &agrave; Hiersac</span>
+            <span className="text-sm">S&eacute;journez &agrave; La Maison de Vacances &agrave; Hiersac</span>
           </div>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.airbnb.fr/rooms/1482578037265572057" target="_blank" rel="noopener noreferrer">

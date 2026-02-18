@@ -1,4 +1,4 @@
-# Maison de Charme - Site Vitrine
+# La Maison de Vacances - Site Vitrine
 
 ## Overview
 Site vitrine pour une maison charentaise de charme avec piscine, jacuzzi et salle de sport située à Hiersac (16290), entre Cognac et Angoulême. Le site est optimisé pour le SEO local et le GEO, avec un blog intégré d'articles sur la région.

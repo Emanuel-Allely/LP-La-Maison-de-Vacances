@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-serif text-lg font-bold mb-3">Maison de Charme</h3>
+            <h3 className="font-serif text-lg font-bold mb-3">La Maison de Vacances</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Maison charentaise avec piscine, jacuzzi et salle de sport &agrave; Hiersac.
               Entre Cognac et Angoul&ecirc;me.
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Maison de Charme &mdash; Hiersac, Charente. Tous droits r&eacute;serv&eacute;s.</p>
+          <p>&copy; {new Date().getFullYear()} La Maison de Vacances &mdash; Hiersac, Charente. Tous droits r&eacute;serv&eacute;s.</p>
         </div>
       </div>
     </footer>

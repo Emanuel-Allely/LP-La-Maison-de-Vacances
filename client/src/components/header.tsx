@@ -37,7 +37,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
         <Link href="/">
           <span className={`font-serif text-xl font-bold cursor-pointer ${textColor} transition-colors`} data-testid="link-logo">
-            Maison de Charme
+            La Maison de Vacances
           </span>
         </Link>
 

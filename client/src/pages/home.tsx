@@ -66,7 +66,7 @@ const gallery = [
 
 export default function Home() {
   useSEO({
-    title: "Maison de Charme avec Piscine | Hiersac, Charente - Location Vacances",
+    title: "La Maison de Vacances avec Piscine | Hiersac, Charente - Location Vacances",
     description: "Maison charentaise de charme avec piscine, jacuzzi et salle de sport \u00e0 Hiersac. Entre Cognac et Angoul\u00eame, id\u00e9ale pour s\u00e9jour en famille ou t\u00e9l\u00e9travail. Note 5/5.",
     ogType: "website",
   });
@@ -86,7 +86,7 @@ export default function Home() {
             5,0/5 sur Airbnb
           </Badge>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-4xl leading-tight">
-            Maison de Charme avec Piscine
+            La Maison de Vacances avec Piscine
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-2 max-w-2xl">
             Hiersac, Charente &mdash; Entre Cognac et Angoul&ecirc;me

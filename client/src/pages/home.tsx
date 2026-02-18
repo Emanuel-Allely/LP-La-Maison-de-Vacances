@@ -85,9 +85,7 @@ export default function Home() {
             <Star className="w-3 h-3 mr-1 fill-amber-400 text-amber-400" />
             5,0/5 sur Airbnb
           </Badge>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-4xl leading-tight">
-            La Maison de Vacances avec Piscine
-          </h1>
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-4xl leading-tight">La Maison de Vacances</h1>
           <p className="text-lg md:text-xl text-white/90 mb-2 max-w-2xl">
             Hiersac, Charente &mdash; Entre Cognac et Angoul&ecirc;me
           </p>
@@ -122,7 +120,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-16 md:py-24 px-4" data-testid="section-about">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -160,7 +157,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-16 md:py-24 px-4 bg-card" data-testid="section-amenities">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-12">&Eacute;quipements & Services</h2>
@@ -175,7 +171,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-16 md:py-24 px-4" data-testid="section-gallery">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-12">Galerie Photos</h2>
@@ -193,7 +188,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-16 md:py-24 px-4 bg-card" data-testid="section-reviews">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -228,7 +222,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-16 md:py-24 px-4" data-testid="section-location">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-4">Emplacement Id&eacute;al</h2>
@@ -266,7 +259,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-16 md:py-24 px-4 bg-primary text-primary-foreground" data-testid="section-cta">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">R&eacute;servez votre s&eacute;jour</h2>

@@ -7,24 +7,26 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  app.get("/api/articles", async (_req, res) => {
+  app.get("/api/articles", async (req, res) => {
     try {
-      const articles = await storage.getArticles();
+      const lang = (req.query.lang as string) || "fr";
+      const articles = await storage.getArticles(lang);
       res.json(articles);
     } catch (error) {
-      res.status(500).json({ error: "Erreur lors de la r\u00e9cup\u00e9ration des articles" });
+      res.status(500).json({ error: "Error fetching articles" });
     }
   });
 
   app.get("/api/articles/:slug", async (req, res) => {
     try {
-      const article = await storage.getArticleBySlug(req.params.slug);
+      const lang = (req.query.lang as string) || "fr";
+      const article = await storage.getArticleBySlug(req.params.slug, lang);
       if (!article) {
-        return res.status(404).json({ error: "Article non trouv\u00e9" });
+        return res.status(404).json({ error: "Article not found" });
       }
       res.json(article);
     } catch (error) {
-      res.status(500).json({ error: "Erreur lors de la r\u00e9cup\u00e9ration de l'article" });
+      res.status(500).json({ error: "Error fetching article" });
     }
   });
 

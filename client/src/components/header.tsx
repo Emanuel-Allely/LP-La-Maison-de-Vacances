@@ -1,19 +1,21 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Home, BookOpen, Mail } from "lucide-react";
+import { Menu, Home, BookOpen, Mail, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
-
-const navItems = [
-  { href: "/", label: "Accueil", icon: Home },
-  { href: "/blog", label: "Blog", icon: BookOpen },
-  { href: "/contact", label: "Contact", icon: Mail },
-];
+import { useI18n } from "@/lib/i18n";
 
 export default function Header() {
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { lang, setLang, t } = useI18n();
+
+  const navItems = [
+    { href: "/", label: t("nav.home"), icon: Home },
+    { href: "/blog", label: t("nav.blog"), icon: BookOpen },
+    { href: "/contact", label: t("nav.contact"), icon: Mail },
+  ];
 
   const isHome = location === "/";
 
@@ -53,9 +55,19 @@ export default function Header() {
               </Button>
             </Link>
           ))}
+          <Button
+            variant="ghost"
+            size="sm"
+            className={`${textColor} transition-colors gap-1`}
+            onClick={() => setLang(lang === "fr" ? "en" : "fr")}
+            data-testid="button-lang-toggle"
+          >
+            <Globe className="w-4 h-4" />
+            {lang === "fr" ? "EN" : "FR"}
+          </Button>
           <a href="https://www.airbnb.fr/rooms/1482578037265572057" target="_blank" rel="noopener noreferrer">
             <Button size="sm" data-testid="button-nav-reserve">
-              R&eacute;server
+              {t("nav.reserve")}
             </Button>
           </a>
         </nav>
@@ -81,8 +93,17 @@ export default function Header() {
                   </Button>
                 </Link>
               ))}
+              <Button
+                variant="ghost"
+                className="w-full justify-start"
+                onClick={() => { setLang(lang === "fr" ? "en" : "fr"); setOpen(false); }}
+                data-testid="button-mobile-lang"
+              >
+                <Globe className="w-4 h-4 mr-3" />
+                {lang === "fr" ? "English" : "Français"}
+              </Button>
               <a href="https://www.airbnb.fr/rooms/1482578037265572057" target="_blank" rel="noopener noreferrer" className="mt-4">
-                <Button className="w-full" onClick={() => setOpen(false)}>R&eacute;server</Button>
+                <Button className="w-full" onClick={() => setOpen(false)}>{t("nav.reserve")}</Button>
               </a>
             </nav>
           </SheetContent>

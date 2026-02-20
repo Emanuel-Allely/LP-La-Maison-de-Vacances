@@ -4,23 +4,23 @@ import {
   articles, contactMessages,
 } from "@shared/schema";
 import { db } from "./db";
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 
 export interface IStorage {
-  getArticles(): Promise<Article[]>;
-  getArticleBySlug(slug: string): Promise<Article | undefined>;
+  getArticles(lang?: string): Promise<Article[]>;
+  getArticleBySlug(slug: string, lang?: string): Promise<Article | undefined>;
   createArticle(article: InsertArticle): Promise<Article>;
   createContactMessage(message: InsertContactMessage): Promise<ContactMessage>;
   getContactMessages(): Promise<ContactMessage[]>;
 }
 
 export class DatabaseStorage implements IStorage {
-  async getArticles(): Promise<Article[]> {
-    return db.select().from(articles).where(eq(articles.published, true));
+  async getArticles(lang: string = "fr"): Promise<Article[]> {
+    return db.select().from(articles).where(and(eq(articles.published, true), eq(articles.lang, lang)));
   }
 
-  async getArticleBySlug(slug: string): Promise<Article | undefined> {
-    const [article] = await db.select().from(articles).where(eq(articles.slug, slug));
+  async getArticleBySlug(slug: string, lang: string = "fr"): Promise<Article | undefined> {
+    const [article] = await db.select().from(articles).where(and(eq(articles.slug, slug), eq(articles.lang, lang)));
     return article || undefined;
   }
 

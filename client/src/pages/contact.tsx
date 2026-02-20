@@ -16,32 +16,35 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { SiAirbnb } from "react-icons/si";
 import { BookingIcon } from "@/components/booking-icon";
 import { useState } from "react";
 import { useSEO } from "@/hooks/use-seo";
-
-const contactSchema = z.object({
-  name: z.string().min(2, "Veuillez entrer votre nom"),
-  email: z.string().email("Adresse email invalide"),
-  phone: z.string().optional(),
-  checkIn: z.string().optional(),
-  checkOut: z.string().optional(),
-  guests: z.coerce.number().min(1).max(5).optional(),
-  message: z.string().min(10, "Votre message doit contenir au moins 10 caract\u00e8res"),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+import { useI18n } from "@/lib/i18n";
 
 export default function Contact() {
+  const { lang, t } = useI18n();
+
   useSEO({
-    title: "Contact | La Maison de Vacances Hiersac - R\u00e9servation & Renseignements",
-    description: "Contactez-nous pour r\u00e9server votre s\u00e9jour dans notre maison charentaise \u00e0 Hiersac. Formulaire de contact, informations pratiques et liens de r\u00e9servation.",
+    title: t("seo.contact.title"),
+    description: t("seo.contact.desc"),
   });
 
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
+
+  const contactSchema = z.object({
+    name: z.string().min(2, t("contact.nameError")),
+    email: z.string().email(t("contact.emailError")),
+    phone: z.string().optional(),
+    checkIn: z.string().optional(),
+    checkOut: z.string().optional(),
+    guests: z.coerce.number().min(1).max(5).optional(),
+    message: z.string().min(10, t("contact.messageError")),
+  });
+
+  type ContactFormData = z.infer<typeof contactSchema>;
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -64,15 +67,15 @@ export default function Contact() {
     onSuccess: () => {
       setSubmitted(true);
       toast({
-        title: "Message envoy\u00e9 !",
-        description: "Nous vous r\u00e9pondrons dans les plus brefs d\u00e9lais.",
+        title: t("contact.successTitle"),
+        description: t("contact.successDesc"),
       });
       form.reset();
     },
     onError: () => {
       toast({
-        title: "Erreur",
-        description: "Un probl\u00e8me est survenu. Veuillez r\u00e9essayer.",
+        title: t("contact.errorTitle"),
+        description: t("contact.errorDesc"),
         variant: "destructive",
       });
     },
@@ -87,11 +90,10 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="font-serif text-3xl md:text-4xl font-bold mb-4" data-testid="text-contact-title">
-            Contactez-nous
+            {t("contact.title")}
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Une question, une demande de r&eacute;servation ou besoin d'informations compl&eacute;mentaires ?
-            N'h&eacute;sitez pas &agrave; nous &eacute;crire.
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -100,12 +102,12 @@ export default function Contact() {
             {submitted ? (
               <Card className="p-8 text-center">
                 <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h2 className="font-serif text-2xl font-bold mb-2">Merci !</h2>
+                <h2 className="font-serif text-2xl font-bold mb-2">{t("contact.thanks")}</h2>
                 <p className="text-muted-foreground mb-6">
-                  Votre message a bien &eacute;t&eacute; envoy&eacute;. Nous vous r&eacute;pondrons dans les meilleurs d&eacute;lais.
+                  {t("contact.sent")}
                 </p>
                 <Button onClick={() => setSubmitted(false)} variant="outline" data-testid="button-new-message">
-                  Envoyer un autre message
+                  {t("contact.newMessage")}
                 </Button>
               </Card>
             ) : (
@@ -118,9 +120,9 @@ export default function Contact() {
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Nom complet</FormLabel>
+                            <FormLabel>{t("contact.name")}</FormLabel>
                             <FormControl>
-                              <Input placeholder="Votre nom" {...field} data-testid="input-name" />
+                              <Input placeholder={t("contact.namePlaceholder")} {...field} data-testid="input-name" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -131,9 +133,9 @@ export default function Contact() {
                         name="email"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Email</FormLabel>
+                            <FormLabel>{t("contact.email")}</FormLabel>
                             <FormControl>
-                              <Input type="email" placeholder="votre@email.com" {...field} data-testid="input-email" />
+                              <Input type="email" placeholder="your@email.com" {...field} data-testid="input-email" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -146,7 +148,7 @@ export default function Contact() {
                       name="phone"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>T&eacute;l&eacute;phone (optionnel)</FormLabel>
+                          <FormLabel>{t("contact.phone")}</FormLabel>
                           <FormControl>
                             <Input type="tel" placeholder="+33 6 XX XX XX XX" {...field} data-testid="input-phone" />
                           </FormControl>
@@ -161,7 +163,7 @@ export default function Contact() {
                         name="checkIn"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Arriv&eacute;e</FormLabel>
+                            <FormLabel>{t("contact.checkIn")}</FormLabel>
                             <FormControl>
                               <Input type="date" {...field} data-testid="input-checkin" />
                             </FormControl>
@@ -174,7 +176,7 @@ export default function Contact() {
                         name="checkOut"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>D&eacute;part</FormLabel>
+                            <FormLabel>{t("contact.checkOut")}</FormLabel>
                             <FormControl>
                               <Input type="date" {...field} data-testid="input-checkout" />
                             </FormControl>
@@ -187,7 +189,7 @@ export default function Contact() {
                         name="guests"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Voyageurs</FormLabel>
+                            <FormLabel>{t("contact.guests")}</FormLabel>
                             <FormControl>
                               <Input type="number" min={1} max={5} placeholder="1-5" {...field} data-testid="input-guests" />
                             </FormControl>
@@ -202,10 +204,10 @@ export default function Contact() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Message</FormLabel>
+                          <FormLabel>{t("contact.message")}</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="D&eacute;crivez votre demande..."
+                              placeholder={t("contact.messagePlaceholder")}
                               className="resize-none min-h-[120px]"
                               {...field}
                               data-testid="input-message"
@@ -224,11 +226,11 @@ export default function Contact() {
                       data-testid="button-submit-contact"
                     >
                       {mutation.isPending ? (
-                        "Envoi en cours..."
+                        t("contact.sending")
                       ) : (
                         <>
                           <Send className="w-4 h-4 mr-2" />
-                          Envoyer le message
+                          {t("contact.send")}
                         </>
                       )}
                     </Button>
@@ -240,30 +242,30 @@ export default function Contact() {
 
           <div className="lg:col-span-2 space-y-4">
             <Card className="p-6">
-              <h3 className="font-semibold mb-4">Informations pratiques</h3>
+              <h3 className="font-semibold mb-4">{t("contact.info")}</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                   <div>
-                    <p className="text-sm font-medium">Adresse</p>
+                    <p className="text-sm font-medium">{t("contact.address")}</p>
                     <p className="text-sm text-muted-foreground">4 Rue d'Angoul&ecirc;me, 16290 Hiersac</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                   <div>
-                    <p className="text-sm font-medium">Horaires</p>
-                    <p className="text-sm text-muted-foreground">Arriv&eacute;e &agrave; partir de 15h00</p>
-                    <p className="text-sm text-muted-foreground">D&eacute;part avant 11h00</p>
+                    <p className="text-sm font-medium">{t("contact.hours")}</p>
+                    <p className="text-sm text-muted-foreground">{t("contact.checkInTime")}</p>
+                    <p className="text-sm text-muted-foreground">{t("contact.checkOutTime")}</p>
                   </div>
                 </div>
               </div>
             </Card>
 
             <Card className="p-6">
-              <h3 className="font-semibold mb-4">R&eacute;servation directe</h3>
+              <h3 className="font-semibold mb-4">{t("contact.directBooking")}</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                R&eacute;servez directement via nos plateformes partenaires :
+                {t("contact.bookVia")}
               </p>
               <div className="space-y-3">
                 <a
@@ -274,7 +276,7 @@ export default function Contact() {
                 >
                   <Button variant="outline" className="w-full justify-start" data-testid="button-contact-airbnb">
                     <SiAirbnb className="w-5 h-5 mr-3 text-[#FF5A5F]" />
-                    R&eacute;server sur Airbnb
+                    {t("contact.bookAirbnb")}
                   </Button>
                 </a>
                 <a
@@ -285,20 +287,20 @@ export default function Contact() {
                 >
                   <Button variant="outline" className="w-full justify-start" data-testid="button-contact-booking">
                     <BookingIcon className="w-5 h-5 mr-3 text-[#003580]" />
-                    R&eacute;server sur Booking
+                    {t("contact.bookBooking")}
                   </Button>
                 </a>
               </div>
             </Card>
 
             <Card className="p-6">
-              <h3 className="font-semibold mb-4">&Agrave; proximit&eacute;</h3>
+              <h3 className="font-semibold mb-4">{t("contact.nearby")}</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Boulangerie, pharmacie, &eacute;picerie &agrave; 5 min &agrave; pied</li>
-                <li>March&eacute; les mercredis et dimanches</li>
-                <li>Gare TGV Angoul&ecirc;me &agrave; 15 min</li>
-                <li>Cognac &agrave; 22 km</li>
-                <li>A&eacute;roport de Limoges &agrave; 108 km</li>
+                <li>{t("contact.nearby1")}</li>
+                <li>{t("contact.nearby2")}</li>
+                <li>{t("contact.nearby3")}</li>
+                <li>{t("contact.nearby4")}</li>
+                <li>{t("contact.nearby5")}</li>
               </ul>
             </Card>
           </div>

@@ -5,12 +5,20 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft, Calendar, MapPin } from "lucide-react";
 import { useSEO } from "@/hooks/use-seo";
+import { useI18n } from "@/lib/i18n";
 import type { Article } from "@shared/schema";
 
 export default function ArticlePage() {
   const { slug } = useParams<{ slug: string }>();
+  const { lang, t } = useI18n();
+
   const { data: article, isLoading } = useQuery<Article>({
-    queryKey: ["/api/articles", slug],
+    queryKey: ["/api/articles", slug, { lang }],
+    queryFn: async () => {
+      const res = await fetch(`/api/articles/${slug}?lang=${lang}`);
+      if (!res.ok) throw new Error("Failed to fetch article");
+      return res.json();
+    },
     enabled: !!slug,
   });
 
@@ -18,7 +26,7 @@ export default function ArticlePage() {
     title: article
       ? `${article.title} | La Maison de Vacances Hiersac`
       : "Article | La Maison de Vacances Hiersac",
-    description: article?.excerpt || "D\u00e9couvrez nos articles sur la Charente.",
+    description: article?.excerpt || (lang === "fr" ? "Découvrez nos articles sur la Charente." : "Discover our articles about Charente."),
     ogType: "article",
   });
 
@@ -46,12 +54,12 @@ export default function ArticlePage() {
     return (
       <div className="min-h-screen py-16 md:py-24 px-4 text-center">
         <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-2xl font-bold mb-4">Article non trouv&eacute;</h1>
-          <p className="text-muted-foreground mb-6">Cet article n'existe pas ou a &eacute;t&eacute; supprim&eacute;.</p>
+          <h1 className="font-serif text-2xl font-bold mb-4">{t("article.notFound")}</h1>
+          <p className="text-muted-foreground mb-6">{t("article.notFoundDesc")}</p>
           <Link href="/blog">
             <Button variant="outline">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Retour au blog
+              {t("article.back")}
             </Button>
           </Link>
         </div>
@@ -65,7 +73,7 @@ export default function ArticlePage() {
         <Link href="/blog">
           <Button variant="ghost" className="mb-6" data-testid="button-back-blog">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Retour au blog
+            {t("article.back")}
           </Button>
         </Link>
 
@@ -79,7 +87,7 @@ export default function ArticlePage() {
           <Badge variant="secondary">{article.category}</Badge>
           <span className="text-sm text-muted-foreground flex items-center gap-1">
             <Calendar className="w-3.5 h-3.5" />
-            {new Date(article.createdAt).toLocaleDateString("fr-FR", {
+            {new Date(article.createdAt).toLocaleDateString(lang === "fr" ? "fr-FR" : "en-US", {
               day: "numeric",
               month: "long",
               year: "numeric",
@@ -100,14 +108,14 @@ export default function ArticlePage() {
         <div className="mt-12 pt-8 border-t">
           <div className="flex items-center gap-2 text-muted-foreground mb-4">
             <MapPin className="w-4 h-4 text-primary" />
-            <span className="text-sm">S&eacute;journez &agrave; La Maison de Vacances &agrave; Hiersac</span>
+            <span className="text-sm">{t("article.stay")}</span>
           </div>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.airbnb.fr/rooms/1482578037265572057" target="_blank" rel="noopener noreferrer">
-              <Button data-testid="button-article-airbnb">R&eacute;server sur Airbnb</Button>
+              <Button data-testid="button-article-airbnb">{t("article.bookAirbnb")}</Button>
             </a>
             <Link href="/contact">
-              <Button variant="outline" data-testid="button-article-contact">Nous contacter</Button>
+              <Button variant="outline" data-testid="button-article-contact">{t("article.contactUs")}</Button>
             </Link>
           </div>
         </div>

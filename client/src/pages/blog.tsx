@@ -5,17 +5,25 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowRight, Calendar } from "lucide-react";
 import { useSEO } from "@/hooks/use-seo";
+import { useI18n } from "@/lib/i18n";
 import type { Article } from "@shared/schema";
 
 export default function Blog() {
+  const { lang, t } = useI18n();
+
   useSEO({
-    title: "Blog - D\u00e9couvrir la Charente | La Maison de Vacances Hiersac",
-    description: "Guides et articles sur la Charente : Cognac, Angoul\u00eame, vignobles, randonn\u00e9es et activit\u00e9s en famille. Pr\u00e9parez votre s\u00e9jour \u00e0 Hiersac.",
+    title: t("seo.blog.title"),
+    description: t("seo.blog.desc"),
     ogType: "blog",
   });
 
   const { data: articles, isLoading } = useQuery<Article[]>({
-    queryKey: ["/api/articles"],
+    queryKey: ["/api/articles", { lang }],
+    queryFn: async () => {
+      const res = await fetch(`/api/articles?lang=${lang}`);
+      if (!res.ok) throw new Error("Failed to fetch articles");
+      return res.json();
+    },
   });
 
   return (
@@ -23,11 +31,10 @@ export default function Blog() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="font-serif text-3xl md:text-4xl font-bold mb-4" data-testid="text-blog-title">
-            D&eacute;couvrir la Charente
+            {t("blog.title")}
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Guides, id&eacute;es de sorties et bons plans pour profiter pleinement de votre s&eacute;jour
-            entre Cognac et Angoul&ecirc;me.
+            {t("blog.subtitle")}
           </p>
         </div>
 
@@ -63,7 +70,7 @@ export default function Blog() {
                       <Badge variant="secondary" className="text-xs">{article.category}</Badge>
                       <span className="text-xs text-muted-foreground flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
-                        {new Date(article.createdAt).toLocaleDateString("fr-FR", {
+                        {new Date(article.createdAt).toLocaleDateString(lang === "fr" ? "fr-FR" : "en-US", {
                           day: "numeric",
                           month: "long",
                           year: "numeric",
@@ -73,7 +80,7 @@ export default function Blog() {
                     <h2 className="font-serif font-bold text-lg mb-2 leading-snug">{article.title}</h2>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-3">{article.excerpt}</p>
                     <span className="text-sm text-primary font-medium flex items-center gap-1">
-                      Lire la suite <ArrowRight className="w-3.5 h-3.5" />
+                      {t("blog.readMore")} <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
                 </Card>

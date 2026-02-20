@@ -6,11 +6,12 @@ import { z } from "zod";
 export const articles = pgTable("articles", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
-  slug: text("slug").notNull().unique(),
+  slug: text("slug").notNull(),
   excerpt: text("excerpt").notNull(),
   content: text("content").notNull(),
   image: text("image").notNull(),
   category: text("category").notNull(),
+  lang: text("lang").notNull().default("fr"),
   published: boolean("published").notNull().default(true),
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });

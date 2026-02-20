@@ -22,6 +22,7 @@ const seedArticles = [
 <p>Depuis notre maison \u00e0 Hiersac, comptez environ 25 minutes en voiture pour rejoindre le centre-ville de Cognac. Les visites des maisons de n\u00e9goce sont possibles toute l'ann\u00e9e, avec des horaires \u00e9largis en saison estivale. La r\u00e9servation est recommand\u00e9e pour les d\u00e9gustations priv\u00e9es.</p>`,
     image: "/images/cognac.png",
     category: "Patrimoine",
+    lang: "fr",
     published: true,
   },
   {
@@ -45,6 +46,7 @@ const seedArticles = [
 <p>La gare TGV d'Angoul\u00eame se trouve \u00e0 seulement 15 minutes en voiture de La Maison de Vacances. C'est la porte d'entr\u00e9e id\u00e9ale pour rejoindre la Charente depuis Paris, Bordeaux ou Lyon.</p>`,
     image: "/images/angouleme.png",
     category: "Tourisme",
+    lang: "fr",
     published: true,
   },
   {
@@ -66,6 +68,7 @@ const seedArticles = [
 <p>Les vignobles qui entourent Hiersac produisent les raisins destin\u00e9s \u00e0 l'\u00e9laboration du cognac. Des sentiers viticoles permettent de d\u00e9couvrir ces paysages ondulants au fil des saisons, du vert tendre du printemps aux ors flamboyants de l'automne.</p>`,
     image: "/images/charente-river.png",
     category: "Nature",
+    lang: "fr",
     published: true,
   },
   {
@@ -87,6 +90,7 @@ const seedArticles = [
 <p>Les mercredis et dimanches, le petit march\u00e9 de Hiersac, \u00e0 5 minutes \u00e0 pied de notre maison, permet de rencontrer les producteurs locaux et de d\u00e9couvrir les sp\u00e9cialit\u00e9s du terroir charentais : grillons, chabichou, miel, fruits de saison et bien s\u00fbr pineau et cognac.</p>`,
     image: "/images/vignobles.png",
     category: "Gastronomie",
+    lang: "fr",
     published: true,
   },
   {
@@ -111,6 +115,7 @@ const seedArticles = [
 <p>Hiersac dispose de tous les commerces essentiels \u00e0 5 minutes \u00e0 pied : boulangerie, \u00e9picerie, pharmacie, pizzeria. Pour les courses plus importantes, Angoul\u00eame et ses grandes surfaces se trouvent \u00e0 15 minutes en voiture.</p>`,
     image: "/images/salon.png",
     category: "S\u00e9jour",
+    lang: "fr",
     published: true,
   },
   {
@@ -134,6 +139,7 @@ const seedArticles = [
 <p>Notre logement est parfaitement adapt\u00e9 aux familles : lits b\u00e9b\u00e9 disponibles, cuisine \u00e9quip\u00e9e pour pr\u00e9parer les repas des enfants, jardin s\u00e9curis\u00e9, et bien s\u00fbr piscine (de juin \u00e0 septembre) avec cr\u00e9neaux de privatisation pour en profiter en toute tranquillit\u00e9.</p>`,
     image: "/images/charente-river.png",
     category: "Famille",
+    lang: "fr",
     published: true,
   },
   {
@@ -172,6 +178,7 @@ const seedArticles = [
 <p>Et n'oubliez pas le march\u00e9 de Hiersac les mercredis et dimanches pour acheter de quoi pr\u00e9parer vos propres repas dans la cuisine enti\u00e8rement \u00e9quip\u00e9e de La Maison de Vacances !</p>`,
     image: "/images/cognac.png",
     category: "Gastronomie",
+    lang: "fr",
     published: true,
   },
 ];

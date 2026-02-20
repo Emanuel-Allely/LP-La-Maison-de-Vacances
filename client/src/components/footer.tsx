@@ -1,9 +1,12 @@
 import { Link } from "wouter";
-import { MapPin, Mail } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { SiAirbnb } from "react-icons/si";
 import { BookingIcon } from "@/components/booking-icon";
+import { useI18n } from "@/lib/i18n";
 
 export default function Footer() {
+  const { t } = useI18n();
+
   return (
     <footer className="bg-card border-t" data-testid="footer">
       <div className="max-w-6xl mx-auto px-4 py-12">
@@ -11,34 +14,33 @@ export default function Footer() {
           <div>
             <h3 className="font-serif text-lg font-bold mb-3">La Maison de Vacances</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Maison charentaise avec piscine, jacuzzi et salle de sport &agrave; Hiersac.
-              Entre Cognac et Angoul&ecirc;me.
+              {t("footer.desc")}
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-sm mb-3">Navigation</h4>
+            <h4 className="font-semibold text-sm mb-3">{t("footer.navigation")}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/">
-                  <span className="text-sm text-muted-foreground cursor-pointer" data-testid="link-footer-accueil">Accueil</span>
+                  <span className="text-sm text-muted-foreground cursor-pointer" data-testid="link-footer-accueil">{t("nav.home")}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/blog">
-                  <span className="text-sm text-muted-foreground cursor-pointer" data-testid="link-footer-blog">Blog</span>
+                  <span className="text-sm text-muted-foreground cursor-pointer" data-testid="link-footer-blog">{t("nav.blog")}</span>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <span className="text-sm text-muted-foreground cursor-pointer" data-testid="link-footer-contact">Contact</span>
+                  <span className="text-sm text-muted-foreground cursor-pointer" data-testid="link-footer-contact">{t("nav.contact")}</span>
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold text-sm mb-3">R&eacute;servation</h4>
+            <h4 className="font-semibold text-sm mb-3">{t("footer.booking")}</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -68,7 +70,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-sm mb-3">Contact</h4>
+            <h4 className="font-semibold text-sm mb-3">{t("footer.contact")}</h4>
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-primary" />
@@ -79,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} La Maison de Vacances &mdash; Hiersac, Charente. Tous droits r&eacute;serv&eacute;s.</p>
+          <p>&copy; {new Date().getFullYear()} La Maison de Vacances &mdash; Hiersac, Charente. {t("footer.rights")}</p>
         </div>
       </div>
     </footer>

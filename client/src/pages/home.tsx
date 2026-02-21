@@ -113,7 +113,7 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed">{t("about.p3")}</p>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>4 Rue d'Angoul&ecirc;me, 16290 Hiersac, France</span>
+                <span>Rue d'Angoul&ecirc;me, 16290 Hiersac, France</span>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3">

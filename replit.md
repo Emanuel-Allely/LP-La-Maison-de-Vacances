@@ -64,7 +64,7 @@ shared/
 ## Liens externes
 - Airbnb: https://www.airbnb.fr/rooms/1482578037265572057
 - Booking: https://www.booking.com/hotel/fr/maison-charentaise-de-charme-avec-piscine-jardin-et-salle-de-sport.fr.html
-- Adresse: 4 Rue d'Angoulême, 16290 Hiersac, France
+- Adresse: Rue d'Angoulême, 16290 Hiersac, France
 
 ## User Preferences
 - Langue: Français (interface utilisateur), site bilingue FR/EN

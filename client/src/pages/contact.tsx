@@ -248,7 +248,7 @@ export default function Contact() {
                   <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                   <div>
                     <p className="text-sm font-medium">{t("contact.address")}</p>
-                    <p className="text-sm text-muted-foreground">4 Rue d'Angoul&ecirc;me, 16290 Hiersac</p>
+                    <p className="text-sm text-muted-foreground">Rue d'Angoul&ecirc;me, 16290 Hiersac</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

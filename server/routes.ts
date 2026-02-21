@@ -35,7 +35,7 @@ export async function registerRoutes(
 
   app.get("/sitemap.xml", async (_req, res) => {
     try {
-      const baseUrl = "https://maison-charente.replit.app";
+      const baseUrl = "https://la-maison-de-vacances.com";
       const today = new Date().toISOString().split("T")[0];
 
       const staticPages = [

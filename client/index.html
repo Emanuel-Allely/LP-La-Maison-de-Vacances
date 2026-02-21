@@ -20,7 +20,13 @@
       "@context": "https://schema.org",
       "@type": "LodgingBusiness",
       "name": "La Maison de Vacances avec Piscine et Fitness",
-      "description": "Maison charentaise idéale pour un séjour au calme en famille, entre amis ou en télétravail.",
+      "description": "Maison charentaise de charme de 120m² avec piscine, jacuzzi et salle de sport à Hiersac. 2 chambres, 2 salles de bain, jusqu'à 5 voyageurs. Entre Cognac (22 km) et Angoulême (15 km). Note 5/5 étoiles.",
+      "url": "https://la-maison-de-vacances.com",
+      "image": "https://la-maison-de-vacances.com/images/hero-house.png",
+      "telephone": "+33658433269",
+      "priceRange": "€€",
+      "checkinTime": "15:00",
+      "checkoutTime": "11:00",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rue d'Angoulême",
@@ -34,13 +40,18 @@
         "latitude": 45.6567,
         "longitude": 0.0522
       },
+      "hasMap": "https://www.google.com/maps?q=45.6567,0.0522",
       "amenityFeature": [
-        {"@type": "LocationFeatureSpecification", "name": "Piscine", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Piscine privée", "value": true},
         {"@type": "LocationFeatureSpecification", "name": "Jacuzzi", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Salle de sport", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Wi-Fi fibre", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Salle de sport / fitness", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Wi-Fi fibre optique", "value": true},
         {"@type": "LocationFeatureSpecification", "name": "Climatisation", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Parking gratuit", "value": true}
+        {"@type": "LocationFeatureSpecification", "name": "Parking gratuit", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Jardin", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Cuisine équipée", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Lave-linge", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Barbecue", "value": true}
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -49,11 +60,31 @@
         "bestRating": "5"
       },
       "numberOfRooms": 2,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 5,
+        "unitText": "guests"
+      },
       "floorSize": {
         "@type": "QuantitativeValue",
         "value": 120,
         "unitCode": "MTK"
-      }
+      },
+      "numberOfBathroomsTotal": 2,
+      "petsAllowed": false,
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.airbnb.fr/rooms/1482578037265572057",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-01-01",
+        "validThrough": "2026-12-31",
+        "description": "Location de vacances à la nuit, minimum 2 nuits"
+      },
+      "sameAs": [
+        "https://www.airbnb.fr/rooms/1482578037265572057",
+        "https://www.booking.com/hotel/fr/maison-charentaise-de-charme-avec-piscine-jardin-et-salle-de-sport.fr.html"
+      ]
     }
     </script>
   </head>

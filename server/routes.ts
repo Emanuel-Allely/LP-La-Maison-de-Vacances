@@ -33,6 +33,20 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/robots.txt", (_req, res) => {
+    const robotsTxt = `User-agent: *
+Allow: /
+Allow: /blog
+Allow: /blog/
+Allow: /contact
+Disallow: /api/
+
+Sitemap: https://la-maison-de-vacances.com/sitemap.xml
+`;
+    res.set("Content-Type", "text/plain");
+    res.send(robotsTxt);
+  });
+
   app.get("/sitemap.xml", async (_req, res) => {
     try {
       const baseUrl = "https://la-maison-de-vacances.com";

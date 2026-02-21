@@ -181,6 +181,223 @@ const seedArticles = [
     lang: "fr",
     published: true,
   },
+  {
+    title: "Marchés et produits du terroir charentais : guide gourmand",
+    slug: "marches-terroir-charentais",
+    excerpt: "Découvrez les marchés locaux autour de Hiersac et les spécialités du terroir charentais : grillons, chabichou, Pineau, miel et chocolats d'Angoulême.",
+    content: `<p>La Charente est une terre de gastronomie authentique. Les marchés locaux, véritables institutions, sont le meilleur moyen de découvrir les saveurs du terroir. Depuis La Maison de Vacances à Hiersac, plusieurs marchés pittoresques vous attendent chaque semaine.</p>
+
+<h2>Les marchés à ne pas manquer</h2>
+<p><strong>Le marché de Hiersac</strong> — À seulement 5 minutes à pied de notre maison, ce petit marché convivial propose fruits et légumes de saison, fromages fermiers et produits artisanaux.</p>
+
+<p><strong>Le marché couvert d'Angoulême</strong> — Le samedi matin, le marché couvert d'Angoulême est un véritable spectacle pour les sens. Une trentaine de commerçants proposent le meilleur de la région sous les halles historiques. À seulement 15 minutes en voiture.</p>
+
+<p><strong>Le marché de Cognac</strong> — Chaque mardi, vendredi et samedi matin, le marché de Cognac anime les rues du centre-ville. À 25 minutes de Hiersac.</p>
+
+<h2>Les spécialités incontournables</h2>
+<p><strong>Les grillons charentais</strong> sont une sorte de rillettes à base de porc, typiquement charentaises. Servis sur du pain grillé avec un verre de Pineau, ils constituent l'apéritif parfait.</p>
+
+<p><strong>Le chabichou du Poitou</strong>, petit fromage de chèvre AOP à la forme caractéristique, est produit dans les fermes des alentours.</p>
+
+<p><strong>Le Pineau des Charentes</strong>, assemblage de moût de raisin et de cognac jeune, est l'apéritif emblématique de la région.</p>
+
+<p><strong>Les chocolats d'Angoulême</strong> — Angoulême a une longue tradition chocolatière, notamment avec la célèbre Marguerite d'Angoulême, un chocolat fin au cognac.</p>
+
+<h2>Conseils pratiques</h2>
+<p>Arrivez tôt le matin pour profiter des meilleurs produits. La cuisine entièrement équipée de La Maison de Vacances vous permettra de préparer de délicieux repas avec vos trouvailles du marché.</p>`,
+    image: "/images/cognac.png",
+    category: "Gastronomie",
+    lang: "fr",
+    published: true,
+  },
+  {
+    title: "Visiting Cognac: Complete Guide to Trading Houses and Tastings",
+    slug: "visiter-cognac-maisons-negoce",
+    excerpt: "Discover the greatest Cognac houses, from Hennessy to Rémy Martin. A unique wine tourism journey just 22 km from La Maison de Vacances.",
+    content: `<p>The town of Cognac, located just 22 km from La Maison de Vacances in Hiersac, is world-famous for its exceptional brandy. A stay in Charente would be incomplete without visiting its prestigious trading houses.</p>
+
+<h2>The great houses to visit</h2>
+<p><strong>Hennessy</strong> — Founded in 1765, Hennessy offers guided tours of its historic cellars on both banks of the Charente. The crossing by traditional boat is an unforgettable experience.</p>
+
+<p><strong>Rémy Martin</strong> — Specialist in Fine Champagne, Rémy Martin opens its estate for immersive visits through vineyards and centuries-old cellars.</p>
+
+<p><strong>Martell</strong> — The oldest Cognac house, founded in 1715, offers a fascinating journey through three centuries of history and craftsmanship.</p>
+
+<h2>Beyond cognac</h2>
+<p>The town of Cognac holds many other surprises: the Royal Castle of Cognac, birthplace of François I, the medieval streets of the old quarter, and the covered market.</p>
+
+<h2>Practical information</h2>
+<p>From our house in Hiersac, allow approximately 25 minutes by car to reach Cognac town centre. Tours of the trading houses are available year-round, with extended hours in summer.</p>`,
+    image: "/images/cognac.png",
+    category: "Heritage",
+    lang: "en",
+    published: true,
+  },
+  {
+    title: "Angoulême, Comic Strip Capital: What to See and Do",
+    slug: "angouleme-cite-bd-activites",
+    excerpt: "Angoulême, a city of art and history, is famous for its comic strip festival. Discover its ramparts, museums and TGV station just 15 minutes from Hiersac.",
+    content: `<p>Angoulême, just 15 minutes from La Maison de Vacances, is a fascinating city perched on a rocky promontory overlooking the Charente valley. Accessible by TGV from Paris in 2h15, it's the ideal entry point for your stay.</p>
+
+<h2>The International City of Comics</h2>
+<p>Angoulême is globally recognised as the capital of comic strips. The International City of Comics houses an exceptional collection of original artwork. Every January, the International Comic Strip Festival attracts over 200,000 visitors worldwide.</p>
+
+<h2>The ramparts and upper town</h2>
+<p>The Angoulême ramparts offer an exceptional panoramic walk with breathtaking views over the Charente countryside. The rampart trail features life-size painted murals of comic book heroes.</p>
+
+<h2>The covered market and gastronomy</h2>
+<p>The Angoulême covered market is a must-visit on Saturday mornings, with the best regional products: grillons charentais, chabichou du Poitou, Pineau des Charentes, and Angoulême chocolates.</p>
+
+<h2>Getting there from Hiersac</h2>
+<p>Angoulême TGV station is just 15 minutes by car from La Maison de Vacances. It's the ideal gateway to reach Charente from Paris, Bordeaux or Lyon.</p>`,
+    image: "/images/angouleme.png",
+    category: "Tourism",
+    lang: "en",
+    published: true,
+  },
+  {
+    title: "Hikes and Walks Along the Charente River",
+    slug: "randonnees-balades-charente",
+    excerpt: "Charente offers magnificent hiking routes between locks, forests and vineyards. Discover the most beautiful walks near Hiersac.",
+    content: `<p>The banks of the Charente offer an exceptional setting for hiking and walking enthusiasts. From our house in Hiersac, many routes await you, between river, forests and vineyards.</p>
+
+<h2>The Vélo Francette along the Charente</h2>
+<p>The Vélo Francette, a national cycling route, follows the Charente for dozens of kilometres. From Hiersac, you can easily access this greenway for safe cycling, away from traffic. The stretch between Angoulême and Cognac is particularly pleasant.</p>
+
+<h2>The Charente locks</h2>
+<p>The Charente, described by Henri IV as the most peaceful river in France, is dotted with historic locks. These structures, often surrounded by lush greenery, make ideal walking destinations.</p>
+
+<h2>La Braconne forest</h2>
+<p>La Braconne forest, about twenty kilometres east of Hiersac, is the largest forest in Charente. Its marked trails wind through landscapes of oak, hornbeam and pine.</p>
+
+<h2>Walking through the vineyards</h2>
+<p>The vineyards surrounding Hiersac produce grapes for cognac production. Vineyard trails reveal rolling landscapes through the seasons.</p>`,
+    image: "/images/charente-river.png",
+    category: "Nature",
+    lang: "en",
+    published: true,
+  },
+  {
+    title: "Charente Vineyards: Wine Route and Tastings",
+    slug: "vignobles-charentais-route-vins",
+    excerpt: "Explore the Charente vineyard route around Hiersac. Pineau des Charentes, cognac and local wines: an exceptional terroir to discover.",
+    content: `<p>Charente is above all a land of vineyards. The hillsides around Hiersac are part of the Cognac appellation area, a unique terroir that has shaped landscapes and local culture for centuries.</p>
+
+<h2>The Cognac appellation</h2>
+<p>The Cognac vineyard covers nearly 75,000 hectares, mainly planted with Ugni Blanc. Around Hiersac, we are in the Fins Bois area, producing elegant and fruity eaux-de-vie. Many winemakers welcome visitors for tours and tastings.</p>
+
+<h2>Pineau des Charentes</h2>
+<p>Pineau des Charentes, a blend of grape must and young cognac, is the region's iconic aperitif. White, rosé or red, it's served chilled and pairs wonderfully with Charentais melon, foie gras or desserts.</p>
+
+<h2>Estates to visit</h2>
+<p>Several wine estates within 15 km of Hiersac welcome visitors for tastings and cellar tours. It's an opportunity to discover the secrets of cognac making, from harvest to distillation in the traditional Charentais copper stills.</p>
+
+<h2>Hiersac market</h2>
+<p>On Wednesdays and Sundays, the small Hiersac market, a 5-minute walk from our house, lets you meet local producers and discover Charente terroir specialties.</p>`,
+    image: "/images/vignobles.png",
+    category: "Gastronomy",
+    lang: "en",
+    published: true,
+  },
+  {
+    title: "Remote Working in Charente: Why Choose Hiersac",
+    slug: "teletravail-charente-hiersac",
+    excerpt: "Combine remote work and quality of life in Charente. Fibre optic, dedicated workspace, pool and absolute calm in our house in Hiersac.",
+    content: `<p>Remote working has transformed our relationship with the workplace. Why stay confined in a city flat when you can work from La Maison de Vacances in the Charente countryside, with pool and gym?</p>
+
+<h2>A professional workspace</h2>
+<p>Our house in Hiersac features a dedicated remote working space equipped with high-speed fibre optic internet and screens. You'll find professional office conditions in an infinitely more pleasant setting.</p>
+
+<h2>Fibre optic in Hiersac</h2>
+<p>Hiersac benefits from fibre optic broadband, ensuring a stable and fast internet connection. Video calls, large file sharing, cloud applications: everything works perfectly. Wi-Fi covers the entire property, including outdoor areas.</p>
+
+<h2>The perfect work-life balance</h2>
+<p>After your working day, enjoy the pool and jacuzzi (June to September) or the gym to unwind. The garden offers an ideal relaxation space for breaks.</p>
+
+<h2>Accessible by TGV</h2>
+<p>Angoulême TGV station, 15 minutes from Hiersac, connects you to Paris in 2h15 and Bordeaux in 50 minutes. Ideal for combining remote working with regional exploration.</p>`,
+    image: "/images/salon.png",
+    category: "Stay",
+    lang: "en",
+    published: true,
+  },
+  {
+    title: "Family Holiday in Charente: Activities for All Ages",
+    slug: "sejour-famille-charente-activites",
+    excerpt: "Charente is full of family activities: canoeing on the Charente, animal parks, castles and much more. Guide to family outings around Hiersac.",
+    content: `<p>Charente is an ideal destination for family holidays. From our house in Hiersac, adapted for children with cots and dedicated equipment, many activities will delight young and old alike.</p>
+
+<h2>Water activities</h2>
+<p>The Charente is perfect for family canoe-kayak trips. Several rental companies offer routes adapted for children, from 2 hours to a full day. The calm waters allow safe navigation, even with young children.</p>
+
+<h2>Parks and leisure</h2>
+<p><strong>Le Paléosite</strong>, about forty kilometres away, is a unique park dedicated to prehistory and Neanderthal man. Flint-knapping workshops, propulsion throwing, archaeological digs: fascinating activities for the whole family.</p>
+
+<h2>Castles and heritage</h2>
+<p>The Château de La Rochefoucauld, one of the finest in France, is nicknamed the "little Chambord". Theatrical visits specially designed for children are offered in summer.</p>
+
+<h2>At the house</h2>
+<p>Our property is perfectly adapted for families: cots available, equipped kitchen, secure garden, and of course the pool (June to September) with private slots to enjoy in complete peace.</p>`,
+    image: "/images/charente-river.png",
+    category: "Family",
+    lang: "en",
+    published: true,
+  },
+  {
+    title: "Best Restaurants Near Hiersac: Where to Eat Well in Charente",
+    slug: "meilleurs-restaurants-hiersac-charente",
+    excerpt: "From L'Aromate in Hiersac to gastronomic tables in Cognac, discover our selection of the best restaurants near La Maison de Vacances.",
+    content: `<p>One of the pleasures of a stay in Charente is the gastronomy! Around La Maison de Vacances in Hiersac, many tables will delight food lovers, from terroir bistros to starred restaurants.</p>
+
+<h2>In Hiersac: L'Aromate</h2>
+<p><strong>L'Aromate</strong> is just steps from our house, at 2 Chemin du Champ Farchaud in Hiersac. This French cuisine restaurant offers a seasonal menu with fresh market produce. The shaded terrace is ideal for summer lunches.</p>
+
+<h2>By the Charente: L'Enfant Terrible</h2>
+<p><strong>L'Enfant Terrible</strong> in Sireuil is a favourite for its exceptional setting by the Charente river. The 50-seat terrace offers magnificent river views — perfect for a sunny lunch.</p>
+
+<h2>Gastronomic tables in Cognac</h2>
+<h3>Les Foudres — Michelin-starred restaurant</h3>
+<p>At the heart of <strong>Chais Monnet</strong>, restaurant <strong>Les Foudres</strong> is Cognac's must-visit starred table. The chef proposes refined cuisine showcasing Charente terroir produce.</p>
+
+<h3>Poulpette — Creative bistro</h3>
+<p><strong>Poulpette</strong> in Cognac is the trendy modern bistro with a weekly changing menu based on permaculture products and local producers.</p>
+
+<h2>Practical tips</h2>
+<p>In high season (July-August), booking is essential for all these addresses. And don't forget the Hiersac market for preparing your own meals in La Maison de Vacances' fully equipped kitchen!</p>`,
+    image: "/images/cognac.png",
+    category: "Gastronomy",
+    lang: "en",
+    published: true,
+  },
+  {
+    title: "Local Markets and Charente Terroir Products: A Gourmet Guide",
+    slug: "marches-terroir-charentais",
+    excerpt: "Discover the local markets around Hiersac and Charente terroir specialties: grillons, chabichou cheese, Pineau, honey and Angoulême chocolates.",
+    content: `<p>Charente is a land of authentic gastronomy. Local markets, true institutions of French life, are the best way to discover the flavours of the terroir. From La Maison de Vacances in Hiersac, several picturesque markets await you each week.</p>
+
+<h2>Markets not to miss</h2>
+<p><strong>Hiersac Market</strong> — Just a 5-minute walk from our house, this friendly little market offers seasonal fruits and vegetables, farmhouse cheeses and artisan products.</p>
+
+<p><strong>Angoulême Covered Market</strong> — On Saturday mornings, the Angoulême covered market is a feast for the senses. Around thirty traders offer the best of the region under the historic halls. Just 15 minutes by car.</p>
+
+<p><strong>Cognac Market</strong> — Every Tuesday, Friday and Saturday morning, Cognac market brings the town centre to life. 25 minutes from Hiersac.</p>
+
+<h2>Must-try specialties</h2>
+<p><strong>Grillons charentais</strong> are a type of pork rillettes, typically from Charente. Perfect as an aperitif with a glass of Pineau.</p>
+
+<p><strong>Chabichou du Poitou</strong>, a small AOP goat cheese, is produced on surrounding farms. Fresh or aged, it pairs wonderfully with summer salads.</p>
+
+<p><strong>Pineau des Charentes</strong>, the region's iconic aperitif, is best served chilled.</p>
+
+<p><strong>Angoulême chocolates</strong> — The city has a long chocolate-making tradition, notably with the famous Marguerite d'Angoulême.</p>
+
+<h2>Practical tips</h2>
+<p>Arrive early for the best products. The fully equipped kitchen at La Maison de Vacances lets you prepare delicious meals with your market finds.</p>`,
+    image: "/images/cognac.png",
+    category: "Gastronomy",
+    lang: "en",
+    published: true,
+  },
 ];
 
 export async function seedDatabase() {

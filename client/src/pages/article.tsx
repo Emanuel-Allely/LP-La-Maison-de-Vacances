@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useParams, Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -29,6 +30,44 @@ export default function ArticlePage() {
     description: article?.excerpt || (lang === "fr" ? "Découvrez nos articles sur la Charente." : "Discover our articles about Charente."),
     ogType: "article",
   });
+
+  useEffect(() => {
+    if (!article) return;
+    const scriptId = "article-jsonld";
+    let script = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!script) {
+      script = document.createElement("script");
+      script.id = scriptId;
+      script.type = "application/ld+json";
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": article.title,
+      "description": article.excerpt,
+      "image": `https://la-maison-de-vacances.com${article.image}`,
+      "datePublished": article.createdAt,
+      "author": {
+        "@type": "Organization",
+        "name": "La Maison de Vacances"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "La Maison de Vacances",
+        "url": "https://la-maison-de-vacances.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://la-maison-de-vacances.com/blog/${article.slug}`
+      },
+      "inLanguage": lang === "fr" ? "fr-FR" : "en-US",
+      "articleSection": article.category,
+    });
+    return () => {
+      script?.remove();
+    };
+  }, [article, lang]);
 
   if (isLoading) {
     return (

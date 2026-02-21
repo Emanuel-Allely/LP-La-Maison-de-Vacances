@@ -33,6 +33,63 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/sitemap.xml", async (_req, res) => {
+    try {
+      const baseUrl = "https://maison-charente.replit.app";
+      const today = new Date().toISOString().split("T")[0];
+
+      const staticPages = [
+        { path: "/", priority: "1.0", changefreq: "weekly" },
+        { path: "/blog", priority: "0.8", changefreq: "weekly" },
+        { path: "/contact", priority: "0.7", changefreq: "monthly" },
+      ];
+
+      const frArticles = await storage.getArticles("fr");
+      const enArticles = await storage.getArticles("en");
+
+      let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+`;
+
+      for (const page of staticPages) {
+        xml += `  <url>
+    <loc>${baseUrl}${page.path}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>
+`;
+      }
+
+      for (const article of frArticles) {
+        xml += `  <url>
+    <loc>${baseUrl}/blog/${article.slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+`;
+      }
+
+      for (const article of enArticles) {
+        xml += `  <url>
+    <loc>${baseUrl}/blog/${article.slug}?lang=en</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+`;
+      }
+
+      xml += `</urlset>`;
+
+      res.set("Content-Type", "application/xml");
+      res.send(xml);
+    } catch (error) {
+      res.status(500).send("Error generating sitemap");
+    }
+  });
+
   app.post("/api/contact", async (req, res) => {
     try {
       const parsed = insertContactMessageSchema.safeParse(req.body);

@@ -241,7 +241,7 @@ export default function Home() {
               </Button>
             </a>
             <a href="https://www.booking.com/hotel/fr/maison-charentaise-de-charme-avec-piscine-jardin-et-salle-de-sport.fr.html" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="text-white border-white/40 bg-white/10 backdrop-blur-sm" data-testid="button-booking-cta">
+              <Button size="lg" className="bg-[#003580] border-[#003580] text-white" data-testid="button-booking-cta">
                 <BookingIcon className="w-5 h-5 mr-2" />
                 Booking
               </Button>
